@@ -5,7 +5,7 @@ function Category(){
     let [categories, setCategories] = useState([{name:"Ninguna Categoria"}]);
 
     useEffect(()=>{
-        fetch("http://localhost:3000/api/subcategories")
+        fetch("http://localhost:3001/api/")
         .then(res => res.json())
         .then(data => {
             setCategories(data.meta.quantityProducts)

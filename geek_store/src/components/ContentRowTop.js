@@ -30,25 +30,22 @@ function ContentRowTop(){
     
 
     useEffect(() => {
-        fetch("http://localhost:3000/api/products")
+        fetch("http://localhost:3001/api/products")
         .then(resultado => resultado.json())
         .then(dataProduct => {
             setProducts(dataProduct.meta.total_products)
         })
 
-        fetch("http://localhost:3000/api/orders")
+        fetch("http://localhost:3001/api/orders")
         .then(resultado => resultado.json())
         .then(dataOrders => {
             setOrders(dataOrders.meta.total_orders)
         })
 
-        fetch("http://localhost:3000/api/users")
+        fetch("http://localhost:3001/api/users")
         .then(resultado => resultado.json())
         .then(dataUser => {
-            
-            setUsers(
-                dataUser.meta.total_users
-            )
+            setUsers(dataUser.meta.total_users)
         })
     }, [])
 

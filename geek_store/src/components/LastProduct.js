@@ -9,15 +9,14 @@ function LastProduct() {
     })
 
     useEffect(()=>{
-        fetch("http://localhost:3000/api/products")
+        fetch("http://localhost:3001/api/products")
         .then(res => res.json())
         .then(data => {
             setProduct({    
                 description: data.meta.lastProducts[0].description,
-                location: "http://localhost:3000/images/uploadProducts/"+ data.meta.lastProducts[0].images[0].name,
-                urlProduct: "http://localhost:3000/productos/"+ data.meta.lastProducts[0].id
+                location: "http://localhost:3001/img/uploadProducts/"+ data.meta.lastProducts[0].img[0].name,
+                urlProduct: "http://localhost:3001/productos/"+ data.meta.lastProducts[0].id
             })
-
         })
         
     },[])
@@ -35,7 +34,10 @@ function LastProduct() {
                 />
             </div>
         </div>
+    
     )
-}
+    
+}  
+
 
 export default LastProduct;

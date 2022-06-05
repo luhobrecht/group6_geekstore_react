@@ -14,12 +14,13 @@ function DataBase(){
     let [products, setProducts] = useState(datos);
 
     useEffect(()=>{
-        fetch("http://localhost:3000/api/products")
+        fetch("http://localhost:3001/api/products")
         .then(res => res.json())
         .then(data =>{
             let array = data.data
             setProducts(array)
         })
+        .catch(err=>console.log(err));
         
     },[])
     
@@ -31,28 +32,35 @@ function DataBase(){
                         <thead>
                             <tr>
                                 <th>Nombre</th>
-                                <th>descripción</th>
+                                <th>Descripción</th>
                                 <th>Precio</th>
                                 <th>Descuento</th>
+                                <th>Endpoint</th>
                             </tr>
                         </thead>
                         <tfoot>
                             <tr>
                                 <th>Nombre</th>
-                                <th>descripción</th>
+                                <th>Descripción</th>
                                 <th>Precio</th>
                                 <th>Descuento</th>
+                                <th>Endpoint</th>
                             </tr>
                         </tfoot>
-                        {products.map((dato,i)=>
+                        
+                        {products.map((dato,i)=> 
 
-                            <TableData key={i} 
+                             <TableData key={i} 
                                 name= {dato.name}
                                 description= {dato.description}
                                 price={dato.price}
                                 discount= {dato.discount}
+                                endpoint= {dato.endpoint}
+
                             />
-                        )}
+                        
+                        )}  
+                    
                     </table>
                 </div>
             </div>
