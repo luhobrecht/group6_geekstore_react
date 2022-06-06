@@ -21,7 +21,7 @@ function SideBar() {
 			<div className="sidebar-heading">Actions</div>
 
 			<li className="nav-item">
-                <a className="nav-link collapsed" href="http://localhost:3000/">
+                <a className="nav-link collapsed" href="http://localhost:3001/">
                     <i className="fas fa-home"></i>
                     <span>Home</span>
                 </a>
@@ -35,14 +35,14 @@ function SideBar() {
             </li>
 
 			<li className="nav-item">
-                <a className="nav-link" href="http://localhost:3000/productos/">
+                <a className="nav-link" href="http://localhost:3001/productos/">
                     <i className="fas fa-fw fa-table"></i>
                     <span>Productos</span>
                 </a>
             </li>
 
             <li className="nav-item">
-                <a className="nav-link" href="http://localhost:3000/usuarios/">
+                <a className="nav-link" href="http://localhost:3001/usuarios/">
                     <i className="fas fa-fw fa-table"></i>
                     <span>Usuarios</span>
                 </a>

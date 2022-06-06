@@ -16,11 +16,14 @@ function DataBase(){
     useEffect(()=>{
         fetch("http://localhost:3001/api/products")
         .then(res => res.json())
-        .then(data =>{
-            let array = data.data
-            setProducts(array)
-        })
-        .catch(err=>console.log(err));
+        .then(res =>{
+            if(res.success){
+                setProducts(res)
+                console.log("funciono")
+            }else{
+                alert("No funciona la base de datos")
+            }})
+            .catch(err=>console.log(err));
         
     },[])
     
