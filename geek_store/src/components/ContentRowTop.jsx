@@ -5,7 +5,7 @@ function ContentRowTop(){
     
     let [products, setProducts] = useState("No dispone");
     let [users, setUsers] = useState("Sin usuarios");
-    let [orders, setOrders] = useState("No dispone")
+    //let [orders, setOrders] = useState("No dispone")
 
     let datos = [
         {
@@ -13,13 +13,13 @@ function ContentRowTop(){
             cifra: products,
             colorBorder: "primary",
             icono: "fa-clipboard-list"
-        },
+        },/*
         {
             titulo: "Ordenes de Compra",
             cifra: orders,
             colorBorder: "success",
             icono: "fa-dollar-sign"
-        },
+        },*/
         {
             titulo: "Cantidad de Usuarios",
             cifra: users,
@@ -36,11 +36,11 @@ function ContentRowTop(){
             setProducts(dataProduct.meta.total_products)
         })
 
-        fetch("http://localhost:3001/api/orders")
+        /*fetch("http://localhost:3001/api/")
         .then(resultado => resultado.json())
         .then(dataOrders => {
             setOrders(dataOrders.meta.total_orders)
-        })
+        })*/
 
         fetch("http://localhost:3001/api/users")
         .then(resultado => resultado.json())

@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 
 function CardCategory({nameCategory, quantity}){
     return (
@@ -13,4 +13,4 @@ function CardCategory({nameCategory, quantity}){
     )
 }
 
-export default CardCategory;
+export default CardCategory;*/

@@ -1,4 +1,5 @@
 import LastProduct from "./LastProduct" ;
+//import LastUser from "./LastUser"
 
 
 function ContentRow() {

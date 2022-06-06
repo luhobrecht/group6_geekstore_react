@@ -14,7 +14,7 @@ function LastProduct() {
         .then(data => {
             setProduct({    
                 description: data.meta.lastProducts[0].description,
-                location: "http://localhost:3001/img/uploadProducts/"+ data.meta.lastProducts[0].img[0].name,
+                location: "http://localhost:3001/img/products/"+ data.meta.lastProducts[0].img,
                 urlProduct: "http://localhost:3001/productos/"+ data.meta.lastProducts[0].id
             })
         })

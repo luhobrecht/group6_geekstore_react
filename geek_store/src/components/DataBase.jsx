@@ -16,14 +16,10 @@ function DataBase(){
     useEffect(()=>{
         fetch("http://localhost:3001/api/products")
         .then(res => res.json())
-        .then(res =>{
-            if(res.success){
-                setProducts(res)
-                console.log("funciono")
-            }else{
-                alert("No funciona la base de datos")
-            }})
-            .catch(err=>console.log(err));
+        .then(data =>{
+            let array = data.data
+            setProducts(array)
+        })
         
     },[])
     
@@ -38,7 +34,6 @@ function DataBase(){
                                 <th>Descripción</th>
                                 <th>Precio</th>
                                 <th>Descuento</th>
-                                <th>Endpoint</th>
                             </tr>
                         </thead>
                         <tfoot>
@@ -47,7 +42,6 @@ function DataBase(){
                                 <th>Descripción</th>
                                 <th>Precio</th>
                                 <th>Descuento</th>
-                                <th>Endpoint</th>
                             </tr>
                         </tfoot>
                         
