@@ -36,14 +36,6 @@ function DataBase(){
                                 <th>Descuento</th>
                             </tr>
                         </thead>
-                        <tfoot>
-                            <tr>
-                                <th>Nombre</th>
-                                <th>Descripción</th>
-                                <th>Precio</th>
-                                <th>Descuento</th>
-                            </tr>
-                        </tfoot>
                         
                         {products.map((dato,i)=> 
 
