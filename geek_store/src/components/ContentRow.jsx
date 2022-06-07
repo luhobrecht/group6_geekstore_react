@@ -1,11 +1,12 @@
 import LastProduct from "./LastProduct" ;
-//import LastUser from "./LastUser"
+import LastTen from "./LastTenProducts"
 
 
 function ContentRow() {
     return (
         <div className="row">
             <LastProduct />
+            <LastTen />
         </div>
     )
 }

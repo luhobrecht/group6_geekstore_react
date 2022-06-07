@@ -1,11 +1,12 @@
-/*import React from "react";
+import React from "react";
 
-function CardCategory({nameCategory, quantity}){
+function CardLastTen({name}){
     return (
         <div className="col-lg-6 mb-4">
             <div className="card bg-info text-white shadow">
                 <div className="card-body">
-                    {nameCategory}: {quantity} products
+                    {name} 
+
 				</div>
                 
             </div>
@@ -13,4 +14,4 @@ function CardCategory({nameCategory, quantity}){
     )
 }
 
-export default CardCategory;*/
+export default CardLastTen;
